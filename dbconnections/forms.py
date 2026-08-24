@@ -1,63 +1,62 @@
 from dajango.forms import ModelForm
-from .models import homepage
-
-class login(ModelForm):
+from .models import loginform,courses,nav_bar,movie_card,ticketbooking,id_card,laptop,attendance,results,rapido_booking
+class loginform(forms.ModelForm,):
     class meta:
-        model = login
-        fields = ['username', 'email', 'password']
+        model =loginform 
+        fields = '__all__'
 
 
-class courses(ModelForm):
+class coursesform(ModelForm):
     class meta:
         model = courses
-        fields = ['course_name', 'price']
+        fields = '__all__'
 
 
-class nav_bar(ModelForm):
+class nav_barform(ModelForm):
     class meta:
         model = nav_bar
-        fields = ['name', 'link']
+        fields = '__all__'
 
 
 
-class movie_card(ModelForm):
+class movie_cardform(ModelForm):
     class meta:
         model = movie_card
-        fields = ['movie_name', 'genre', 'description', 'image', 'rating']
+        fields = '__all__'
 
 
 
 
-class ticketbooking(ModelForm):
+class ticketbookingform(ModelForm):
     class meta:
         model = ticketbooking
-        fields = ['name', 'destination', 'number_of_tickets', 'date', 'time', 'phone_no']
+        fields ='__all__'
 
 
-class id_card(ModelForm):
+class id_cardform(ModelForm):
     class meta:
         model = id_card
-        fields = ['name', 'id_number', 'phone_no', 'address', 'image', 'organization']
+        fields = '__all__'
 
 
-class laptop(ModelForm):
+class laptopform(ModelForm):
     class meta:
         model = laptop
-        fields = ['brand', 'model', 'price', 'specifications', 'image']
+        fields = '__all__'
 
 
-class attendance(ModelForm):
+class attendanceform(ModelForm):
     class meta:
         model = attendance
-        fields = ['name', 'date', 'status']
+        fields = '__all__'
 
-class result(ModelForm):
+class resultform(ModelForm):
     class meta:
         model = result
-        fields = ['name', 'subject', 'internal_marks', 'external_marks', 'total_marks', 'percentage']
+        fields = '__all__'
 
 
-class rapido_booking(ModelForm):
+class rapido_bookingformnav_bar(ModelForm):
     class meta:
         model = rapido_booking
-        fields = ['name', 'phone_no', 'pickup_location', 'drop_location', 'vehicle_type']
+        fields = '__all__'
