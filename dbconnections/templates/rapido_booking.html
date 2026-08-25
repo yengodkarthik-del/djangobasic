@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rapido Booking</title>
+</head>
+<body>
+
+    <h1>Rapido Bike Booking</h1>
+
+    <form method="POST">
+        {% csrf_token %}
+
+        <label>Pickup Location:</label>
+        <input type="text" name="pickup" required>
+        <br><br>
+
+        <label>Drop Location:</label>
+        <input type="text" name="drop" required>
+        <br><br>
+
+        <label>Mobile Number:</label>
+        <input type="tel" name="mobile" required>
+        <br><br>
+
+        <button type="submit">Book Ride</button>
+    </form>
+
+</body>
+</html>
